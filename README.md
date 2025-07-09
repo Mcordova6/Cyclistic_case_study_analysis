@@ -44,7 +44,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
 **5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.  
 **6.** Documented each step in order to ensure reproducibility.
 ### SQL Code:
-[Preparation SQL Code](./01_Prepare_Data.sql)  
+[Prepare SQL Code](./01_Prepare_Data.sql)  
 
 ## Process
 ### BigQuery Cleaning Process:  
@@ -80,6 +80,8 @@ This repository showcases my end-to-end workflow for the capstone project in the
 * **Casual Riders:** Usage by casual riders steadily increases each hour and reaches its peak at 17:00 UTC.
 #### 7. Preferred Rideable Type
 * The classic bike is the most preferred rideable type option among both members and casual riders.
+### SQL Code:
+[Analyze SQL Code](./03_Analyze_Data.sql)
 
 ## Share
 I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
