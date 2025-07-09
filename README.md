@@ -2,12 +2,12 @@
 This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like Google Drive, BigQuery, SQL, and Tableau Public to derive actionable insights.
 
 ## Table of Contents
-> [Introduction](#introduction)  
-> [Ask](#ask)  
-> [Prepare](#prepare)  
-> [Process](#process)  
-> [Analyze](#analyze)  
-> [Share](#share)
+[Introduction](#introduction)  
+[Ask](#ask)  
+[Prepare](#prepare)  
+[Process](#process)  
+[Analyze](#analyze)  
+[Share](#share)
 
 ## Introduction
 **Company:** Cyclistic  
@@ -34,14 +34,15 @@ This repository showcases my end-to-end workflow for the capstone project in the
 > **Number of Files Downloaded:** 12 (One for each month)  
 > **Column Names:** `ride_id`, `rideable_type`, `started_at`, `ended_at`, `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`,` end_lng`, and `member_casual`.
 ### Tools Used:
->Google Drive  
->BigQuery (SQL)  
+Google Drive    
+BigQuery (SQL)  
 ### Preparation Process:
-* Downloaded all the datasets with customer information from the past 12 months.
-* Transferred the files into Google Drive.
-* Created a table for each dataset in BigQuery.
-* Previewed each table to ensure consistent formatting.
-* Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.
+**1.** Downloaded all the datasets with customer information from the past 12 months.  
+**2.** Transferred the files into Google Drive.  
+**3.** Created a table for each dataset in BigQuery.  
+**4.** Previewed each table to ensure consistent formatting.  
+**5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.
+**6.** Documented each step in order to ensure reproducibility.
 ### SQL Code:
 ```sql
 CREATE TABLE `test-project-461721.cyclistic_bike_share_data.rides_12_months` AS
@@ -70,19 +71,15 @@ UNION ALL
 SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202505-divvy-tripdata`
 ```
 ## Process
-### BigQuery Cleaning Process:
-* Removed all null values from each column using `IS NOT NULL` (Reduced the number of rows to 3959660).
-* Removed all duplicate values using `DISTINCT`.
-* Removed extra spaces using `TRIM()`.
-* Combined start_lat and start_lng using `CONCAT()`.
-* Combined end_lat and end_lng using `CONCAT()`.
-* Created separate columns for different values from the `started_at` column including:
-  * Hour (Used `FORMAT_TIMESTAMP()`)
-  * Weekday (Used `FORMAT_TIMESTAMP()`)
-  * Month (Used `FORMAT_TIMESTAMP()`)
-  * Year (Used `EXTRACT()`)
-* Created a separate column for the duration of rides in hours using `TIMESTAMP_DIFF()`.
-* Created a separate table containing the cleaned data using `CREATE TABLE`.
+### BigQuery Cleaning Process:  
+**1.** Removed all null values from each column using `IS NOT NULL` (Reduced the number of rows to 3,959,660).  
+**2.** Removed all duplicate values using `DISTINCT`.  
+**3.** Removed extra spaces using `TRIM()`.  
+**4.** Combined start_lat and start_lng using `CONCAT()`.  
+**5.** Combined end_lat and end_lng using `CONCAT()`.  
+**6.** Created separate columns for different values from the `started_at` column including hour, weekday, and month using `FORMAT_TIMESTAMP()` as well as year using `EXTRACT()`.    
+**7.** Created a separate column for the duration of rides in hours using `TIMESTAMP_DIFF()`.  
+**8.** Created a separate table containing the cleaned data using `CREATE TABLE`.
 ### SQL Code:
 ```sql
 CREATE TABLE `test-project-461721.cyclistic_bike_share_data.cleaned_rides_12_months` AS
@@ -141,5 +138,14 @@ WHERE
 * The classic bike is the most preferred rideable type option among both members and casual riders.
 ## Share
 I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
+### General Overview:
+* **Top Rectangle:** Contains tile, color legend that changes depending on the client type selected, a toggle to choose to view the information of either a member or casual rider, and a dropdown filter to see the information from specific years.
+* **Three Boxes Under Top Rectangle:** The first box displays the month with the highest number of riders from the selected client type, along with their total count for that month. The next two boxes contain text tables showing the top three most frequently used start and end stations by riders of the selected client type as well as the total number of those riders at each station.  
+* **Next Two Boxes:** The first box features a bar chart displaying the number of riders from the selected client type who use our products on different days of the week. The second box presents a bar chart showing how many of these riders use our products for more than one hour.
+* **Last Two Boxes:** The first box displays a line chart showing the number of riders from the selected client type who use our products at different hours of the day (in Coordinated Universal Time, UTC). The final box features a pie chart illustrating the percentage of these riders who use a classic bike, electric bike, or electric scooter.
+* **Member/Casual Selection Toggle:** Affects all of the data visualizations.
+* **Year Dropdown Filter:** Affects only the bar charts, line graph, and pie chart.
+* **Top Color Legend:** Pertains to all data visualizations except the pie chart.
+### Dashboard Preview:
 > ![Capstone Case Study (Dashboard)](https://github.com/user-attachments/assets/45bbcf60-56d1-4302-be3a-da0dc3a909b3)
 > [View Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
