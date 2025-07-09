@@ -8,6 +8,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
 [Process](#process)  
 [Analyze](#analyze)  
 [Share](#share)
+[Act](#act#)
 
 ## Introduction
 **Company:** Cyclistic  
@@ -149,3 +150,9 @@ I created a range of data visualizations, including bar charts, a pie chart, a l
 ### Dashboard Preview:
 > ![Capstone Case Study (Dashboard)](https://github.com/user-attachments/assets/45bbcf60-56d1-4302-be3a-da0dc3a909b3)
 > [View Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
+
+## Act
+### Marketing Recommendations:
+**1.** Offer a one-week free trial of the membership in order for casual riders to experience utilizing our products during the week instead of solely on the weekend.  
+**2.** Advertise the free trial heavily during the weekend at the most popular stations among causual riders, which include `DuSable Lake Shore Dr & Monroe St`, `Michigan Ave & Oak St`, `Streeter Dr & Grand Ave`, and `DuSable Lake Shore Dr & North Blvd`, at 17:00 UTC, if possible, in order to reach target audience.  
+**3.** In the free trial advertisements, highlight the classic bike and emphasize its durability for long rides, as casual riders tend to prefer the classic bike and are more likely to use our products for over an hour.
