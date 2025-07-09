@@ -44,33 +44,8 @@ This repository showcases my end-to-end workflow for the capstone project in the
 **5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.  
 **6.** Documented each step in order to ensure reproducibility.
 ### SQL Code:
-[Preparation SQL Code](./01_Prepare_Data.sql)
-```sql
-CREATE TABLE `test-project-461721.cyclistic_bike_share_data.rides_12_months` AS
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202406-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202407-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202408-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202409-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202410-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202411-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202412-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202501-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202502-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202503-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202504-divvy-tripdata`
-UNION ALL
-SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202505-divvy-tripdata`
-```
+[Preparation SQL Code](./01_Prepare_Data.sql)  
+
 ## Process
 ### BigQuery Cleaning Process:  
 **1.** Removed all null values from each column using `IS NOT NULL` (Reduced the number of rows to 3,959,660).  
@@ -82,41 +57,8 @@ SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202505-divvy-tripda
 **7.** Created a separate column for the duration of rides in hours using `TIMESTAMP_DIFF()`.  
 **8.** Created a separate table containing the cleaned data using `CREATE TABLE`.
 ### SQL Code:
-```sql
-CREATE TABLE `test-project-461721.cyclistic_bike_share_data.cleaned_rides_12_months` AS
-SELECT DISTINCT
-  TRIM(ride_id) AS ride_id,
-  TRIM(rideable_type) AS rideable_type,
-  TRIM(start_station_name) AS start_station_name,
-  TRIM(start_station_id) AS start_station_id,
-  TRIM(end_station_name) AS end_station_name,
-  TRIM(end_station_id) AS end_station_id,
-  TRIM(member_casual) AS member_casual,
-  CONCAT(start_lat,",", " ", start_lng) AS start_lat_lng,
-  CONCAT(end_lat,",", " ", end_lng) AS end_lat_lng,
-  started_at,
-  ended_at,
-  FORMAT_TIMESTAMP('%H', started_at) AS hour_started,
-  TIMESTAMP_DIFF(ended_at, started_at, HOUR) AS hours_duration,
-  FORMAT_TIMESTAMP('%B', started_at) AS month,
-  FORMAT_TIMESTAMP('%A', started_at) AS day_name,
-  EXTRACT(YEAR FROM started_at) AS year
-FROM `test-project-461721.cyclistic_bike_share_data.rides_12_months`
-WHERE
-  ride_id IS NOT NULL
-  AND rideable_type IS NOT NULL
-  AND started_at IS NOT NULL
-  AND ended_at  IS NOT NULL
-  AND start_station_name IS NOT NULL
-  AND start_station_id IS NOT NULL
-  AND end_station_name IS NOT NULL
-  AND end_station_id IS NOT NULL
-  AND start_lat IS NOT NULL
-  AND start_lng IS NOT NULL
-  AND end_lat IS NOT NULL
-  AND end_lng IS NOT NULL
-  AND member_casual IS NOT NULL
-```
+[Process SQL Code](./02_Process_Data.sql)  
+
 ## Analyze
 ### Analytical Findings:
 #### 1. Ride Amount Variations (By Week)
