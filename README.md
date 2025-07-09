@@ -7,8 +7,8 @@ This repository showcases my end-to-end workflow for the capstone project in the
 [Prepare](#prepare)  
 [Process](#process)  
 [Analyze](#analyze)  
-[Share](#share)
-[Act](#act#)
+[Share](#share)  
+[Act](#act)
 
 ## Introduction
 **Company:** Cyclistic  
