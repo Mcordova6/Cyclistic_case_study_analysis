@@ -44,6 +44,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
 **5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.  
 **6.** Documented each step in order to ensure reproducibility.
 ### SQL Code:
+[Preparation SQL Code](./01_Prepare_Data.sql)
 ```sql
 CREATE TABLE `test-project-461721.cyclistic_bike_share_data.rides_12_months` AS
 SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202406-divvy-tripdata`
