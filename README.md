@@ -1,5 +1,5 @@
 # Cyclistic Case Study Analysis
-This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like Google Drive, BigQuery, SQL, and Tableau Public to derive actionable insights.
+This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like SQL and Tableau Public to derive actionable insights.
 
 ## Table of Contents
 [Introduction](#introduction)  
@@ -13,7 +13,8 @@ This repository showcases my end-to-end workflow for the capstone project in the
 **Company:** Cyclistic  
 **Location:** Chicago  
 **Description:** Bike-Share Company  
-**Position:** Junior Data Analyst  
+**Position:** Junior Data Analyst   
+**Tools Used:** Google Drive, BigQuery (SQL), and Tableau Public.  
 **Deliverables:**  
 >**1.** A clear statement of the business task.  
  **2.** A clear explanation of all the data sources I utilized.  
@@ -33,15 +34,13 @@ This repository showcases my end-to-end workflow for the capstone project in the
 > **Date Range:** June 2024 – May 2025  
 > **Number of Files Downloaded:** 12 (One for each month)  
 > **Column Names:** `ride_id`, `rideable_type`, `started_at`, `ended_at`, `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`,` end_lng`, and `member_casual`.
-### Tools Used:
-Google Drive    
-BigQuery (SQL)  
+
 ### Preparation Process:
 **1.** Downloaded all the datasets with customer information from the past 12 months.  
 **2.** Transferred the files into Google Drive.  
 **3.** Created a table for each dataset in BigQuery.  
 **4.** Previewed each table to ensure consistent formatting.  
-**5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.
+**5.** Ran query in order to unionize the information from all the datasets into a single table using `UNION ALL` and `CREATE TABLE`.  
 **6.** Documented each step in order to ensure reproducibility.
 ### SQL Code:
 ```sql
@@ -136,6 +135,7 @@ WHERE
 * **Casual Riders:** Usage by casual riders steadily increases each hour and reaches its peak at 17:00 UTC.
 ### Preferred Rideable Type
 * The classic bike is the most preferred rideable type option among both members and casual riders.
+
 ## Share
 I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
 ### General Overview:
