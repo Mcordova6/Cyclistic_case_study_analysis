@@ -1,4 +1,4 @@
--- Created new BigQuery Table with unionized data
+-- Created new BigQuery table with unionized data
 CREATE TABLE `test-project-461721.cyclistic_bike_share_data.rides_12_months` AS
 
 -- Unionized all the datasets from June 2024 to May 2025
