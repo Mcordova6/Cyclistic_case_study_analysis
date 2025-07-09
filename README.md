@@ -1,5 +1,5 @@
-# Cyclistic_case_study_analysis
-This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like Google Drive, BigQuery, SQL, and Tableau to derive actionable insights.
+# Cyclistic Case Study Analysis
+This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like Google Drive, BigQuery, SQL, and Tableau Public to derive actionable insights.
 
 ## Table of Contents
 > [Introduction](#introduction)  
@@ -23,7 +23,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
  **6.** Three recommendations based on my analysis.
 
 ## Ask
-**Business Task:** It was concluded that annual members bring in more profit compared to casual riders; therefore, this analysis is being conducted to identify which factors to market in order to effectively convince casual riders into becoming annual members. I was provided with datasets consisting of customer information from the last 12 months and will be analyzing the components that differentiate members from casual riders. 
+**Business Task:** It was concluded that annual members bring in more profit compared to casual riders; therefore, this analysis is being conducted to identify which factors to market in order to effectively convince casual riders to become annual members. I was provided with datasets consisting of customer information from the past 12 months and will be analyzing them to discover the components that differentiate members from casual riders. 
 
 ## Prepare
 ### Dataset Information:
@@ -34,9 +34,9 @@ This repository showcases my end-to-end workflow for the capstone project in the
 > **Number of Files Downloaded:** 12 (One for each month)  
 > **Column Names:** `ride_id`, `rideable_type`, `started_at`, `ended_at`, `start_station_name`, `start_station_id`, `end_station_name`, `end_station_id`, `start_lat`, `start_lng`, `end_lat`,` end_lng`, and `member_casual`.
 ### Tools Used:
-* Google Drive
-* BigQuery (SQL)  
-### Preparation process:
+>Google Drive  
+>BigQuery (SQL)  
+### Preparation Process:
 * Downloaded all the datasets with customer information from the past 12 months.
 * Transferred the files into Google Drive.
 * Created a table for each dataset in BigQuery.
@@ -72,17 +72,17 @@ SELECT * FROM `test-project-461721.cyclistic_bike_share_data.202505-divvy-tripda
 ## Process
 ### BigQuery Cleaning Process:
 * Removed all null values from each column using `IS NOT NULL` (Reduced the number of rows to 3959660).
-* Removed all dupicate values using `DISTINCT`.
+* Removed all duplicate values using `DISTINCT`.
 * Removed extra spaces using `TRIM()`.
 * Combined start_lat and start_lng using `CONCAT()`.
 * Combined end_lat and end_lng using `CONCAT()`.
-* Created seperate columns for different values from the `started_at` column including:
+* Created separate columns for different values from the `started_at` column including:
   * Hour (Used `FORMAT_TIMESTAMP()`)
   * Weekday (Used `FORMAT_TIMESTAMP()`)
   * Month (Used `FORMAT_TIMESTAMP()`)
   * Year (Used `EXTRACT()`)
-* Created seperate column for the duration of rides in hours using `TIMESTAMP_DIFF()`.
-* Created seperate table containing the cleaned data using `CREATE TABLE`.
+* Created a separate column for the duration of rides in hours using `TIMESTAMP_DIFF()`.
+* Created a separate table containing the cleaned data using `CREATE TABLE`.
 ### SQL Code:
 ```sql
 CREATE TABLE `test-project-461721.cyclistic_bike_share_data.cleaned_rides_12_months` AS
@@ -130,9 +130,9 @@ WHERE
 * **Members:** The top three start stations the most members utilize include those in `Kingsbury St & Kinzie St`, `Clinton St & Washington Blvd`, and `Clinton St & Madison St`.  
 * **Casual Riders:** The top three start stations the most casual riders utilize include those in `DuSable Lake Shore Dr & Monroe St`, `Michigan Ave & Oak St`, and `Streeter Dr & Grand Ave`.
 ### Top 3 End Stations
-* **Members:** The top three end stations the most members utilize include those in `Kingsbury St & Kinzie St`, `Clinton St & Washington Blvd`, and `Clinton St & Madison St`.  
+* **Members:** The top three end stations the most members utilized include those in `Kingsbury St & Kinzie St`, `Clinton St & Washington Blvd`, and `Clinton St & Madison St`.  
 * **Casual Riders:** The top three end stations the most casual riders utilize include those in `DuSable Lake Shore Dr & Monroe St`, `DuSable Lake Shore Dr & North Blvd`, and `Michigan Ave & Oak St`.
-### Differences in Hour Durtion
+### Differences in Hour Duration
 * Between members and casual riders, more casual riders utilize our products to take rides that surpass an hour in duration.
 ### Differences in Hour Started
 * **Members:** Member usage of our products sees an initial peak at 8:00 UTC, followed by a higher peak at 17:00 UTC.
@@ -142,4 +142,4 @@ WHERE
 ## Share
 I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
 > ![Capstone Case Study (Dashboard)](https://github.com/user-attachments/assets/45bbcf60-56d1-4302-be3a-da0dc3a909b3)
-> [View Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)  
+> [View Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
