@@ -2,14 +2,12 @@
 This repository showcases my end-to-end workflow for the capstone project in the Google Data Analytics Certificate program. It reflects how I applied the key stages of the data analysis process (ask, prepare, process, analyze, share, and act) using tools like Google Drive, BigQuery, SQL, and Tableau to derive actionable insights.
 
 ## Table of Contents
-> [Introduction](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#introduction)  
-> [Ask](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#ask)  
-> [Prepare](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#prepare)  
-> [Process](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#process)  
-> [Analyze](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#analyze)  
-> [Share](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#share)  
-> [Act](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#act)  
-> [Conclusion](https://github.com/Mcordova6/Cyclistic_case_study_analysis/edit/main/README.md#conclusion)
+> [Introduction](#introduction)  
+> [Ask](#ask)  
+> [Prepare](#prepare)  
+> [Process](#process)  
+> [Analyze](#analyze)  
+> [Share](#share)
 
 ## Introduction
 **Company:** Cyclistic  
@@ -142,5 +140,6 @@ WHERE
 ### Preferred Rideable Type
 * The classic bike is the most preferred rideable type option among both members and casual riders.
 ## Share
-> [Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
-## Act
+I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
+> ![Capstone Case Study (Dashboard)](https://github.com/user-attachments/assets/45bbcf60-56d1-4302-be3a-da0dc3a909b3)
+> [View Tableau Dashboard](https://public.tableau.com/views/CapstoneCaseStudyOfficial/Dashboard2?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)  
