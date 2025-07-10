@@ -79,7 +79,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
 * **Members:** Member usage of our products sees an initial peak at 8:00 UTC, followed by a higher peak at 17:00 UTC.
 * **Casual Riders:** Usage by casual riders steadily increases each hour and reaches its peak at 17:00 UTC.
 #### 7. Preferred Rideable Type
-* The classic bike is the most preferred rideable type option among both members and casual riders.
+* The classic bike is the preferred rideable type option among both members and casual riders.
 ### SQL Code:
 [Analyze SQL Code](./03_Analyze_Data.sql)
 
@@ -107,6 +107,6 @@ The first box displays a line chart showing the number of riders from the select
 #### 1. 30-Day Free Trial    
 Offer a 30-day free trial of the membership during July in order to give the highest number of casual riders an opportunity to experience utilizing our products during the week instead of solely on the weekend.  
 #### 2. Reach Target Audience   
-Advertise the free trial heavily during the weekends at the most popular stations among causual riders, which include `Streeter Dr & Grand Ave`, `DuSable Lake Shore Dr & Monroe St`, `Michigan Ave & Oak St`, and `DuSable Lake Shore Dr & North Blvd`, at 17:00 UTC, if possible, in order to reach target audience.  
+Advertise the free trial heavily during the weekends at the most popular stations among casual riders, which include `Streeter Dr & Grand Ave`, `DuSable Lake Shore Dr & Monroe St`, `Michigan Ave & Oak St`, and `DuSable Lake Shore Dr & North Blvd`, at 17:00 UTC, if possible, in order to reach target audience.  
 #### 3. Tailor To Preferences
 In the free trial advertisements, highlight the classic bike and emphasize its durability for long rides, as casual riders tend to prefer the classic bike and are more likely to use our products for over an hour.
