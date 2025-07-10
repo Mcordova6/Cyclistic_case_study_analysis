@@ -105,7 +105,7 @@ The first box displays a line chart showing the number of riders from the select
 ## Act
 ### Marketing Recommendations:
 #### 1. 30-Day Free Trial    
-Offer a 30-day free trial of the membership in order for casual riders to experience utilizing our products during the week instead of solely on the weekend.  
+Offer a 30-day free trial of the membership during July in order to give the highest number of casual riders an opportunity to experience utilizing our products during the week instead of solely on the weekend.  
 #### 2. Reach Target Audience   
 Advertise the free trial heavily during the weekend at the most popular stations among causual riders, which include `Streeter Dr & Grand Ave`, `DuSable Lake Shore Dr & Monroe St`, `Michigan Ave & Oak St`, and `DuSable Lake Shore Dr & North Blvd`, at 17:00 UTC, if possible, in order to reach target audience.  
 #### 3. Tailor To Preferences
