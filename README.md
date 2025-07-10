@@ -87,7 +87,7 @@ This repository showcases my end-to-end workflow for the capstone project in the
 I created a range of data visualizations, including bar charts, a pie chart, a line graph, and text tables, to represent insights from the Analyze phase. These visuals are compiled into an interactive dashboard, allowing for easy exploration and interpretation in one centralized view.  
 ### General Overview:
 #### Top Rectangle:
-Contains tile, color legend that changes depending on the client type selected, a toggle to choose to view the information of either a member or casual rider, and a dropdown filter to see the information from specific years.
+Contains tile, color legend that changes depending on the client type selected, a toggle to choose to view the information of either members or casual riders, and a dropdown filter to see the information from specific years.
 #### Next Three Boxes: 
 The first box displays the month with the highest number of riders from the selected client type, along with their total count for that month. The next two boxes contain text tables showing the top three most frequently used start and end stations by riders of the selected client type as well as the total number of those riders at each station.  
 #### Next Two Boxes:
